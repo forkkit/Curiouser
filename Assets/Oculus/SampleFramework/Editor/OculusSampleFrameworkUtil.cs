@@ -13,7 +13,7 @@ under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR COND
 ANY KIND, either express or implied. See the License for the specific language governing
 permissions and limitations under the License.
 ************************************************************************************/
-
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 
@@ -38,10 +38,11 @@ public class OculusSampleFrameworkUtil
 #if UNITY_2017_2_OR_NEWER
 	private static void HandlePlayModeState(PlayModeStateChange state)
   {
-    if (state == PlayModeStateChange.EnteredPlayMode)
-    {
-      OVRPlugin.SendEvent("load", OVRPlugin.wrapperVersion.ToString(), "sample_framework");
-    }
+    Debug.Log("I'm being ignored!");
+    // if (state == PlayModeStateChange.EnteredPlayMode)
+    // {
+    //   OVRPlugin.SendEvent("load", OVRPlugin.wrapperVersion.ToString(), "sample_framework");
+    // }
   }
 #endif
 }
