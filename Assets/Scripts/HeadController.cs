@@ -31,11 +31,24 @@ public class HeadController : MonoBehaviour
             if (other.gameObject.CompareTag("Food"))
             {
                 aliceController.scale(scaleSpeed);
-                cakeSource.RequestBiteSound();
             }
             else if (other.gameObject.CompareTag("Drink"))
             {
                 aliceController.scale(-scaleSpeed);
+            }
+            
+        }
+    }
+
+    void OnTriggerEnter(Collider other){
+        if (other.gameObject.GetComponent<Consumable>()) {
+            Consumable consumable = other.gameObject.GetComponent<Consumable>();
+            if (other.gameObject.CompareTag("Food"))
+            {
+                cakeSource.RequestBiteSound();
+            }
+            else if (other.gameObject.CompareTag("Drink"))
+            {
                 bottleSource.StartBottleLoop();
             }
             
