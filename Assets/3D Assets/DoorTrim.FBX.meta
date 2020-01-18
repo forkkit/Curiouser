@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0613f52db29c7d2409783ed4c329ded3
+=======
+guid: 6c6cd918a43b8409f8452e573db84933
+>>>>>>> consumable
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:

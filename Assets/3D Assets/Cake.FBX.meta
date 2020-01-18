@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f85391a911e5dc44b9869611694d0df8
+=======
+guid: 3e48f68c39b5e47c79d9d960f6e24f2a
+>>>>>>> consumable
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -68,12 +72,15 @@ ModelImporter:
     100124: Sphere004
     100126: Sphere005
     100128: Sphere006
+<<<<<<< HEAD
     100130: Cake
     100132: Dots
     100134: EatMe
     100136: Filling
     100138: Frosting
     100140: Swirls
+=======
+>>>>>>> consumable
     400000: //RootNode
     400002: GeoSphere013
     400004: GeoSphere014
@@ -139,12 +146,15 @@ ModelImporter:
     400124: Sphere004
     400126: Sphere005
     400128: Sphere006
+<<<<<<< HEAD
     400130: Cake
     400132: Dots
     400134: EatMe
     400136: Filling
     400138: Frosting
     400140: Swirls
+=======
+>>>>>>> consumable
     2100000: Cream
     2100002: Red
     2100004: Pink
@@ -214,12 +224,15 @@ ModelImporter:
     2300122: Sphere004
     2300124: Sphere005
     2300126: Sphere006
+<<<<<<< HEAD
     2300128: Cake
     2300130: Dots
     2300132: EatMe
     2300134: Filling
     2300136: Frosting
     2300138: Swirls
+=======
+>>>>>>> consumable
     3300000: GeoSphere013
     3300002: GeoSphere014
     3300004: GeoSphere015
@@ -284,12 +297,15 @@ ModelImporter:
     3300122: Sphere004
     3300124: Sphere005
     3300126: Sphere006
+<<<<<<< HEAD
     3300128: Cake
     3300130: Dots
     3300132: EatMe
     3300134: Filling
     3300136: Frosting
     3300138: Swirls
+=======
+>>>>>>> consumable
     4300000: Line004
     4300002: Line005
     4300004: Line006
@@ -354,12 +370,15 @@ ModelImporter:
     4300122: GeoSphere065
     4300124: GeoSphere066
     4300126: GeoSphere067
+<<<<<<< HEAD
     4300128: Cake
     4300130: Frosting
     4300132: Swirls
     4300134: Dots
     4300136: EatMe
     4300138: Filling
+=======
+>>>>>>> consumable
   externalObjects: {}
   materials:
     importMaterials: 1

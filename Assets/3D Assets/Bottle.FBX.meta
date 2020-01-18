@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 02db8f45993a7754d80969f9ec6e0558
+=======
+guid: 80f97ed49ddd24b609e9598290f5104f
+>>>>>>> consumable
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -7,7 +11,10 @@ ModelImporter:
     400000: //RootNode
     2100000: Green
     2100002: DrinkMe
+<<<<<<< HEAD
     2100004: Blue
+=======
+>>>>>>> consumable
     2300000: //RootNode
     3300000: //RootNode
     4300000: Bottle

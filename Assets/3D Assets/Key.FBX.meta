@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b3b53b9cf24957145a8f256039dd12f4
+=======
+guid: e1076c752fc7d4b2999a95e2c11c2846
+>>>>>>> consumable
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -24,21 +28,30 @@ ModelImporter:
     2300006: Line001
     2300008: Line002
     2300010: Line003
+<<<<<<< HEAD
     2300012: //RootNode
+=======
+>>>>>>> consumable
     3300000: Cylinder001
     3300002: GeoSphere001
     3300004: GeoSphere002
     3300006: Line001
     3300008: Line002
     3300010: Line003
+<<<<<<< HEAD
     3300012: //RootNode
+=======
+>>>>>>> consumable
     4300000: Cylinder001
     4300002: Line001
     4300004: GeoSphere001
     4300006: GeoSphere002
     4300008: Line002
     4300010: Line003
+<<<<<<< HEAD
     4300012: Key
+=======
+>>>>>>> consumable
   externalObjects: {}
   materials:
     importMaterials: 1

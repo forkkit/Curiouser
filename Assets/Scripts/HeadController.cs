@@ -27,7 +27,7 @@ public class HeadController : MonoBehaviour
         if (other.gameObject.GetComponent<Consumable>()) {
             Consumable consumable = other.gameObject.GetComponent<Consumable>();
             float amountRemaining = consumable.consume();
-            Debug.Log($"Amount remaining: {amountRemaining}. Height: {aliceController.height}");
+            // Debug.Log($"Amount remaining: {amountRemaining}. Height: {aliceController.height}");
             if (other.gameObject.CompareTag("Food"))
             {
                 aliceController.scale(scaleSpeed);
