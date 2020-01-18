@@ -5,6 +5,7 @@ using UnityEditor;
 
 public class DoorController : MonoBehaviour
 {
+    public GameObject key;
     Animator m_Animator;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class DoorController : MonoBehaviour
     }
     void OnTriggerEnter(Collider other) 
     {
-        if (other.gameObject.CompareTag("Key"))
+        if (other.gameObject == key)
         {
             Debug.Log("Used key!");
             m_Animator.SetTrigger("Open");
