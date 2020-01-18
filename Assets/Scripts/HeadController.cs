@@ -6,7 +6,7 @@ using UnityEditor;
 public class HeadController : MonoBehaviour
 {
     public GameObject alice;
-    public AliceController aliceController;
+    AliceController aliceController;
     // Start is called before the first frame update
     void Start()
     {

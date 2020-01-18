@@ -406,7 +406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alice: {fileID: 817482117}
-  aliceController: {fileID: 0}
 --- !u!135 &747129520
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -508,6 +507,7 @@ GameObject:
   - component: {fileID: 778991258}
   - component: {fileID: 778991257}
   - component: {fileID: 778991261}
+  - component: {fileID: 778991262}
   m_Layer: 0
   m_Name: FoodDummy
   m_TagString: Food
@@ -603,6 +603,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &778991262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778991256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ea0ed706c944ec593681e5da378340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consumeRate: 0.01
 --- !u!1 &817482117
 GameObject:
   m_ObjectHideFlags: 0
