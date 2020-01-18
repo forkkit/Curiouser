@@ -1492,8 +1492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ea0ed706c944ec593681e5da378340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  consumeRate: 0.01
-  shrinkRate: 0.01
+  consumeRate: 0
+  shrinkRate: 0
 --- !u!54 &468926554
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1524,8 +1524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
   m_snapPosition: 1
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
+  m_snapOrientation: 1
+  m_snapOffset: {fileID: 1324172366}
   m_grabPoints: []
 --- !u!23 &468926556
 MeshRenderer:
@@ -1587,7 +1587,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.60646373, z: -0, w: 0.7951112}
   m_LocalPosition: {x: -0.108000025, y: 0.93, z: -2.759}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1324172366}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -74.66801, z: 0}
@@ -4286,6 +4287,36 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!1 &1324172365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1324172366}
+  m_Layer: 0
+  m_Name: GrabMe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1324172366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324172365}
+  m_LocalRotation: {x: 0.06162845, y: -0.06162845, z: -0.70441604, w: 0.70441604}
+  m_LocalPosition: {x: 0, y: -0.0041000247, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468926558}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -10, z: -90}
 --- !u!1 &1390070293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 9c0deaad25d10bb4ba73562564c1cf98,
@@ -4304,8 +4335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ea0ed706c944ec593681e5da378340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  consumeRate: 0.01
-  shrinkRate: 0.01
+  consumeRate: 0
+  shrinkRate: 0
 --- !u!114 &1390070295
 MonoBehaviour:
   m_ObjectHideFlags: 0
