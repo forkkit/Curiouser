@@ -27,7 +27,7 @@ public class Consumable : MonoBehaviour
         if (this.amountRemaining <= 0) {
             // Move it really far away
             Debug.Log("Item consumed!");
-            this.gameObject.transform.Translate(new Vector3(-1000, -1000, -1000));
+            this.gameObject.SetActive(false);
         }
         return this.amountRemaining;
     }
