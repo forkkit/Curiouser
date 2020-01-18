@@ -26,12 +26,12 @@ public class HeightPitch : MonoBehaviour
         if (targetPitch-0.02f > aSource.pitch)
         {
             aSource.pitch = aSource.pitch + rateOfChange * Time.deltaTime;
-            Debug.Log("Raising pitch!");
+            //Debug.Log("Raising pitch!");
         }
         else if (targetPitch + 0.02f < aSource.pitch)
         {
             aSource.pitch = aSource.pitch - rateOfChange * Time.deltaTime;
-            Debug.Log("Lowering pitch!");
+            //Debug.Log("Lowering pitch!");
         }
     }
 }

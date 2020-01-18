@@ -7,6 +7,8 @@ public class HeadController : MonoBehaviour
 {
     public GameObject alice;
     AliceController aliceController;
+    public BottlePitching bottleSource;
+    public CakeAudio cakeSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +31,20 @@ public class HeadController : MonoBehaviour
             if (other.gameObject.CompareTag("Food"))
             {
                 aliceController.scale(scaleSpeed);
+                cakeSource.RequestBiteSound();
             }
             else if (other.gameObject.CompareTag("Drink"))
             {
                 aliceController.scale(-scaleSpeed);
+                bottleSource.StartBottleLoop();
             }
             
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        bottleSource.StopAndResetBottleSound();
+        cakeSource.StopRequestingBiteSound();
     }
 }
