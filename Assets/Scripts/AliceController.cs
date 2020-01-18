@@ -6,11 +6,12 @@ using UnityEngine.Events;
 
 public class AliceController : MonoBehaviour
 {
-    float heightMin = 0.38f;
-    float heightMax = 2.75f;
+    public float heightMin = 0.38f;
+    public float heightMax = 2.75f;
     public float height {
         get { return (this.transform.localScale.magnitude - heightMin) / (heightMax - heightMin); }
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,22 +33,10 @@ public class AliceController : MonoBehaviour
         );
     }
 
-    void OnTriggerStay(Collider other) 
-    {
-        const float scaleSpeed = 0.01f;
-        if (other.gameObject.CompareTag("Food"))
-        {
-            this.transform.localScale = clampVector3(
-                this.transform.localScale + Vector3.one * scaleSpeed,
-                this.heightMin,
-                this.heightMax);
-        }
-        else if (other.gameObject.CompareTag("Drink"))
-        {
-            this.transform.localScale = clampVector3(
-                this.transform.localScale - Vector3.one * scaleSpeed,
-                this.heightMin,
-                this.heightMax);
-        }
+    public void scale(float amount) {
+        this.transform.localScale = clampVector3(
+            this.transform.localScale + Vector3.one * amount,
+            this.heightMin,
+            this.heightMax);
     }
 }
