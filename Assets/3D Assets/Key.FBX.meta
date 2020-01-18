@@ -1,57 +1,15 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: b3b53b9cf24957145a8f256039dd12f4
-=======
-guid: e1076c752fc7d4b2999a95e2c11c2846
->>>>>>> consumable
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cylinder001
-    100002: GeoSphere001
-    100004: GeoSphere002
-    100006: //RootNode
-    100008: Line001
-    100010: Line002
-    100012: Line003
-    400000: Cylinder001
-    400002: GeoSphere001
-    400004: GeoSphere002
-    400006: //RootNode
-    400008: Line001
-    400010: Line002
-    400012: Line003
+    100000: //RootNode
+    400000: //RootNode
     2100000: Gold
-    2300000: Cylinder001
-    2300002: GeoSphere001
-    2300004: GeoSphere002
-    2300006: Line001
-    2300008: Line002
-    2300010: Line003
-<<<<<<< HEAD
-    2300012: //RootNode
-=======
->>>>>>> consumable
-    3300000: Cylinder001
-    3300002: GeoSphere001
-    3300004: GeoSphere002
-    3300006: Line001
-    3300008: Line002
-    3300010: Line003
-<<<<<<< HEAD
-    3300012: //RootNode
-=======
->>>>>>> consumable
-    4300000: Cylinder001
-    4300002: Line001
-    4300004: GeoSphere001
-    4300006: GeoSphere002
-    4300008: Line002
-    4300010: Line003
-<<<<<<< HEAD
-    4300012: Key
-=======
->>>>>>> consumable
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Key
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -104,8 +62,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -132,7 +90,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

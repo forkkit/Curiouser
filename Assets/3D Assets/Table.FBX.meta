@@ -1,46 +1,14 @@
 fileFormatVersion: 2
-guid: f85391a911e5dc44b9869611694d0df8
+guid: 6745f8eb30755b64998a757c8a935e57
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cake
-    100004: Dots
-    100006: EatMe
-    100008: Filling
-    100010: Frosting
-    100012: Swirls
     400000: //RootNode
-    400002: Cake
-    400004: Dots
-    400006: EatMe
-    400008: Filling
-    400010: Frosting
-    400012: Swirls
-    2100000: Cream
-    2100002: Pink
-    2100004: White
-    2100006: Purple
-    2100008: Red
-    2300000: Cake
-    2300002: Dots
-    2300004: EatMe
-    2300006: Filling
-    2300008: Frosting
-    2300010: Swirls
-    3300000: Cake
-    3300002: Dots
-    3300004: EatMe
-    3300006: Filling
-    3300008: Frosting
-    3300010: Swirls
-    4300000: Cake
-    4300002: Frosting
-    4300004: Swirls
-    4300006: Dots
-    4300008: EatMe
-    4300010: Filling
-    9500000: //RootNode
+    2100000: White
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Table
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -93,8 +61,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.0254
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -121,7 +89,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

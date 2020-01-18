@@ -1,83 +1,30 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 3d8cc016e48e82843b79e98bf6271f04
-=======
-guid: 8fdc7c1ed24704eb18a29d4a63ef0c3c
->>>>>>> consumable
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box001
-    100002: Box002
-    100004: Circle001
-    100006: Cylinder002
-    100008: //RootNode
-    100010: Rectangle001
-    100012: Sphere009
-    100014: Sphere010
-<<<<<<< HEAD
-    100016: Door
-    100018: DoorKnob
-    100020: Keyhole
-=======
->>>>>>> consumable
-    400000: Box001
-    400002: Box002
-    400004: Circle001
-    400006: Cylinder002
-    400008: //RootNode
-    400010: Rectangle001
-    400012: Sphere009
-    400014: Sphere010
-<<<<<<< HEAD
-    400016: Door
-    400018: DoorKnob
-    400020: Keyhole
-=======
->>>>>>> consumable
-    2100000: Brown
-    2100002: Gold
+    100000: //RootNode
+    100002: Door
+    100004: DoorKnob
+    100006: Keyhole
+    400000: //RootNode
+    400002: Door
+    400004: DoorKnob
+    400006: Keyhole
+    2100000: Gold
+    2100002: Brown
     2100004: Brown Drk
     2100006: Black Flat
-    2300000: Box001
-    2300002: Box002
-    2300004: Circle001
-    2300006: Cylinder002
-    2300008: Rectangle001
-    2300010: Sphere009
-    2300012: Sphere010
-<<<<<<< HEAD
-    2300014: Door
-    2300016: DoorKnob
-    2300018: Keyhole
-=======
->>>>>>> consumable
-    3300000: Box001
-    3300002: Box002
-    3300004: Circle001
-    3300006: Cylinder002
-    3300008: Rectangle001
-    3300010: Sphere009
-    3300012: Sphere010
-<<<<<<< HEAD
-    3300014: Door
-    3300016: DoorKnob
-    3300018: Keyhole
-=======
->>>>>>> consumable
-    4300000: Box001
-    4300002: Box002
-    4300004: Rectangle001
-    4300006: Cylinder002
-    4300008: Circle001
-    4300010: Sphere009
-    4300012: Sphere010
-<<<<<<< HEAD
-    4300014: DoorKnob
-    4300016: Door
-    4300018: Keyhole
-=======
->>>>>>> consumable
+    2300000: Door
+    2300002: DoorKnob
+    2300004: Keyhole
+    3300000: Door
+    3300002: DoorKnob
+    3300004: Keyhole
+    4300000: DoorKnob
+    4300002: Door
+    4300004: Keyhole
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -130,8 +77,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -158,7 +105,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
