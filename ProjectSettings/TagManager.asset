@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Food
   - Drink
-  - Key
   layers:
   - Default
   - TransparentFX
