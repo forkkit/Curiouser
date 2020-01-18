@@ -8,6 +8,7 @@ public class AliceController : MonoBehaviour
 {
     public float heightMin = 0.38f;
     public float heightMax = 2.75f;
+    public Transform follow;
     public float height {
         get { return (this.transform.localScale.y - heightMin) / (heightMax - heightMin); }
     }
@@ -23,6 +24,30 @@ public class AliceController : MonoBehaviour
     {
         
     }
+
+    public void scaleAround(GameObject target, Vector3 pivot, Vector3 newScale) {
+        Vector3 A = target.transform.localPosition;
+        Vector3 B = pivot;
+    
+        Vector3 C = A - B; // diff from object pivot to desired pivot/origin
+    
+        float RS = newScale.x / target.transform.localScale.x; // relative scale factor
+    
+        // calc final position post-scale
+        Vector3 FP = B + C * RS;
+    
+        // finally, actually perform the scale/translation
+        target.transform.localScale = newScale;
+        target.transform.localPosition = FP;
+    }
+
+    private void scaleAroundFollow(Vector3 scale) {
+        scaleAround(
+            this.gameObject,
+            new Vector3(follow.transform.position.x, 0, follow.transform.position.z),
+            scale
+        );
+    }
     
     Vector3 clampVector3(Vector3 input, float min, float max) {
         // Made this cause Vector3.ClampMagnitude only takes a maximum value
@@ -34,9 +59,12 @@ public class AliceController : MonoBehaviour
     }
 
     public void scale(float amount) {
-        this.transform.localScale = clampVector3(
-            this.transform.localScale + Vector3.one * amount,
-            this.heightMin,
-            this.heightMax);
+        scaleAroundFollow(
+            clampVector3(
+                this.transform.localScale + Vector3.one * amount,
+                this.heightMin,
+                this.heightMax
+            )
+        );
     }
 }
