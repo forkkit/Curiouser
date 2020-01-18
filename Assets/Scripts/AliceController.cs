@@ -9,7 +9,7 @@ public class AliceController : MonoBehaviour
     public float heightMin = 0.38f;
     public float heightMax = 2.75f;
     public float height {
-        get { return (this.transform.localScale.magnitude - heightMin) / (heightMax - heightMin); }
+        get { return (this.transform.localScale.y - heightMin) / (heightMax - heightMin); }
     }
 
     // Start is called before the first frame update

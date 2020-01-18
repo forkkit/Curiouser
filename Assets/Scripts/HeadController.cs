@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class HeadController : MonoBehaviour
 {
@@ -21,13 +22,19 @@ public class HeadController : MonoBehaviour
     void OnTriggerStay(Collider other) 
     {
         const float scaleSpeed = 0.01f;
-        if (other.gameObject.CompareTag("Food"))
-        {
-            aliceController.scale(scaleSpeed);
-        }
-        else if (other.gameObject.CompareTag("Drink"))
-        {
-            aliceController.scale(-scaleSpeed);
+        if (other.gameObject.GetComponent<Consumable>()) {
+            Consumable consumable = other.gameObject.GetComponent<Consumable>();
+            float amountRemaining = consumable.consume();
+            Debug.Log($"Amount remaining: {amountRemaining}. Height: {aliceController.height}");
+            if (other.gameObject.CompareTag("Food"))
+            {
+                aliceController.scale(scaleSpeed);
+            }
+            else if (other.gameObject.CompareTag("Drink"))
+            {
+                aliceController.scale(-scaleSpeed);
+            }
+            
         }
     }
 }
