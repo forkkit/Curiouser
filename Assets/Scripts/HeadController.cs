@@ -10,6 +10,7 @@ public class HeadController : MonoBehaviour
     public BottlePitching bottleSource;
     public CakeAudio cakeSource;
     public GameObject doNotPassOverlay; // The canvas holding the out-of-bounds message
+    public GameObject winScreenOverlay;
     public float fadeDuration = 0.2f; // Duration in seconds of UI fade
     private bool outOfBounds = false;
     private CanvasGroup canvasOutOfBounds;
@@ -34,57 +35,6 @@ public class HeadController : MonoBehaviour
         {
             if (canvasOutOfBounds.alpha < 1)
                 canvasOutOfBounds.alpha += Time.deltaTime / fadeDuration;
-        }
-    }
-
-    public void FadeCollisionOverlayIn()
-    {
-        StartCoroutine(DoFadeIn());
-    }
-
-    public void FadeCollisionOverlayOut()
-    {
-        StartCoroutine(DoFadeOut());
-    }
-
-    IEnumerator DoFadeIn()
-    {
-        CanvasGroup canvasG = doNotPassOverlay.GetComponent<CanvasGroup>();
-        while (canvasG.alpha < 1)
-        {
-            canvasG.alpha += Time.deltaTime; // optinal parameters 2 ,3 ,5 
-            yield return null;
-        }
-    }
-
-    IEnumerator DoFadeOut()
-    {
-        CanvasGroup canvasG = doNotPassOverlay.GetComponent<CanvasGroup>();
-        while (canvasG.alpha > 0)
-        {
-            canvasG.alpha -= Time.deltaTime; // optinal parameters 2 ,3 ,5 
-            yield return null;
-        }
-    }
-
-    IEnumerator ManageFade()
-    {
-        CanvasGroup canvasG = doNotPassOverlay.GetComponent<CanvasGroup>();
-        if (outOfBounds)
-        {
-            while (canvasG.alpha > 0)
-            {
-                canvasG.alpha -= Time.deltaTime; 
-                yield return null;
-            }
-        }
-        else
-        {
-            while (canvasG.alpha < 1)
-            {
-                canvasG.alpha += Time.deltaTime;
-                yield return null;
-            }
         }
     }
 
@@ -122,7 +72,11 @@ public class HeadController : MonoBehaviour
             {
                 bottleSource.StartBottleLoop();
             }
-            
+        }
+        if (other.gameObject.CompareTag("Win"))
+        {
+            WinScreenController winScreenController = winScreenOverlay.GetComponent<WinScreenController>();
+            winScreenController.fadeIn();
         }
     }
 
