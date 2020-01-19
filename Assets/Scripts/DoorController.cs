@@ -6,6 +6,7 @@ using UnityEditor;
 public class DoorController : MonoBehaviour
 {
     public GameObject key;
+    public Curiouser_AudioManager audioManager;
     Animator m_Animator;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class DoorController : MonoBehaviour
         {
             Debug.Log("Used key!");
             m_Animator.SetTrigger("Open");
+            audioManager.DoorOpened();
         }
     }
 }

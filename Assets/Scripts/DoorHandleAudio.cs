@@ -28,14 +28,23 @@ public class DoorHandleAudio : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        doorBeingTried = true;
+
+
+    private void OnTriggerEnter(Collider other){
+        if(other.tag == "GameController"){
+
+        
+                doorBeingTried = true;
+                Debug.Log("Triggered a controller!" + gameObject.name);
+        }else{
+            Debug.Log("nvm");
+        }
+
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
+    private void OnTriggerExit(Collider other){
         doorBeingTried = false;
+        Debug.Log("Not triggering anymore.");
     }
 
     public void RequestLockedDoorSound()
@@ -50,7 +59,7 @@ public class DoorHandleAudio : MonoBehaviour
 
     void LockedDoorSound()
     {
-        //Debug.Log("We're tryna play a door sound here!");
+        Debug.Log("We're tryna play a door sound here!");
         aSource.clip = lockedDoorClips[Random.Range(0, lockedDoorClips.Length)];
         aSource.pitch = Random.Range(.97f, 1.03f);
         aSource.Play();

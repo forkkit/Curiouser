@@ -313,7 +313,7 @@ public class OVRGrabber : MonoBehaviour
                 else
                 {
                     m_grabbedObjectRotOff = Quaternion.identity;
-                }
+                } 
             }
             else
             {
