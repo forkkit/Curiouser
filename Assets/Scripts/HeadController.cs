@@ -9,17 +9,32 @@ public class HeadController : MonoBehaviour
     AliceController aliceController;
     public BottlePitching bottleSource;
     public CakeAudio cakeSource;
-    public GameObject doNotPassOverlay;
+    public GameObject doNotPassOverlay; // The canvas holding the out-of-bounds message
+    public float fadeDuration = 0.2f; // Duration in seconds of UI fade
+    private bool outOfBounds = false;
+    private CanvasGroup canvasOutOfBounds;
+
     // Start is called before the first frame update
     void Start()
     {
         aliceController = alice.GetComponent<AliceController>();
+        canvasOutOfBounds = doNotPassOverlay.GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Manage fading/in out of out-of-bounds message
+        if (!outOfBounds)
+        {
+            if (canvasOutOfBounds.alpha > 0)
+                canvasOutOfBounds.alpha -= Time.deltaTime / fadeDuration; 
+        }
+        else
+        {
+            if (canvasOutOfBounds.alpha < 1)
+                canvasOutOfBounds.alpha += Time.deltaTime / fadeDuration;
+        }
     }
 
     public void FadeCollisionOverlayIn()
@@ -52,6 +67,27 @@ public class HeadController : MonoBehaviour
         }
     }
 
+    IEnumerator ManageFade()
+    {
+        CanvasGroup canvasG = doNotPassOverlay.GetComponent<CanvasGroup>();
+        if (outOfBounds)
+        {
+            while (canvasG.alpha > 0)
+            {
+                canvasG.alpha -= Time.deltaTime; 
+                yield return null;
+            }
+        }
+        else
+        {
+            while (canvasG.alpha < 1)
+            {
+                canvasG.alpha += Time.deltaTime;
+                yield return null;
+            }
+        }
+    }
+
     void OnTriggerStay(Collider other) 
     {
         const float scaleSpeed = 0.01f;
@@ -69,6 +105,10 @@ public class HeadController : MonoBehaviour
             }
             
         }
+        if (other.gameObject.CompareTag("Do Not Pass"))
+        {
+            outOfBounds = true;
+        }
     }
 
     void OnTriggerEnter(Collider other){
@@ -84,10 +124,6 @@ public class HeadController : MonoBehaviour
             }
             
         }
-        else if (other.gameObject.CompareTag("Do Not Pass")) {
-            Debug.Log("Hey, don't do that!");
-            FadeCollisionOverlayIn();
-        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -95,8 +131,7 @@ public class HeadController : MonoBehaviour
         bottleSource.StopAndResetBottleSound();
         cakeSource.StopRequestingBiteSound();
         if (other.gameObject.CompareTag("Do Not Pass")) {
-            Debug.Log("Ok, that's better");
-            FadeCollisionOverlayOut();
+            outOfBounds = false;
         }
     }
 }

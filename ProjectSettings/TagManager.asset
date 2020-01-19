@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - Drink
+  - Do Not Pass
   layers:
   - Default
   - TransparentFX
