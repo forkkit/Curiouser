@@ -28,7 +28,7 @@ public class DoorHandleAudio : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         doorBeingTried = true;
     }
@@ -50,6 +50,7 @@ public class DoorHandleAudio : MonoBehaviour
 
     void LockedDoorSound()
     {
+        //Debug.Log("We're tryna play a door sound here!");
         aSource.clip = lockedDoorClips[Random.Range(0, lockedDoorClips.Length)];
         aSource.pitch = Random.Range(.97f, 1.03f);
         aSource.Play();
