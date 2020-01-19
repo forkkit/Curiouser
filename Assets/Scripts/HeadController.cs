@@ -12,8 +12,10 @@ public class HeadController : MonoBehaviour
     public GameObject doNotPassOverlay; // The canvas holding the out-of-bounds message
     public GameObject winScreenOverlay;
     public float fadeDuration = 0.2f; // Duration in seconds of UI fade
+    public float maxTimeOutOfBounds = 3f;
     private bool outOfBounds = false;
     private CanvasGroup canvasOutOfBounds;
+    private float countdown = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +30,24 @@ public class HeadController : MonoBehaviour
         // Manage fading/in out of out-of-bounds message
         if (!outOfBounds)
         {
+            countdown = Mathf.Clamp(countdown - Time.deltaTime, 0, maxTimeOutOfBounds);
             if (canvasOutOfBounds.alpha > 0)
                 canvasOutOfBounds.alpha -= Time.deltaTime / fadeDuration; 
         }
         else
         {
+            countdown += Time.deltaTime;
+            if (countdown > maxTimeOutOfBounds) {
+                resetScene();
+            }
             if (canvasOutOfBounds.alpha < 1)
                 canvasOutOfBounds.alpha += Time.deltaTime / fadeDuration;
         }
+    }
+
+    void resetScene()
+    {
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     void OnTriggerStay(Collider other) 
