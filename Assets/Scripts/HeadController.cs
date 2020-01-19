@@ -85,7 +85,7 @@ public class HeadController : MonoBehaviour
                 bottleSource.StartBottleLoop();
             }
         }
-        if (other.gameObject.CompareTag("Win"))
+        if (other.gameObject.CompareTag("Win") && aliceController.height < 0.2f)
         {
             WinScreenController winScreenController = winScreenOverlay.GetComponent<WinScreenController>();
             winScreenController.fadeIn();

@@ -9,21 +9,13 @@ public class AliceController : MonoBehaviour
     public float heightMin = 0.38f;
     public float heightMax = 2.75f;
     public Transform follow;
+
+
     public float height {
         get { return (this.transform.localScale.y - heightMin) / (heightMax - heightMin); }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
     public void scaleAround(GameObject target, Vector3 pivot, Vector3 newScale) {
         Vector3 A = target.transform.localPosition;

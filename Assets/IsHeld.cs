@@ -8,7 +8,7 @@ public class IsHeld : MonoBehaviour
     public float timeHit;
     public Collider hitting;
     public FollowOffset follow;
-
+    public TimeTurn turn;
     // Update is called once per frame
     private void OnTriggerEnter(Collider other){
         if(other.tag == "GameController"){
@@ -16,6 +16,7 @@ public class IsHeld : MonoBehaviour
                 timeHit = Time.timeSinceLevelLoad;
                 //Debug.Log("started a clock!" + gameObject.name);
                 follow.enabled = false;
+                turn.turn = true;
         }
 
     }
@@ -34,6 +35,7 @@ public class IsHeld : MonoBehaviour
         if(other != hitting)
             return;
         
+        turn.turn = false;
         timeHit = 0;
         hitting = null;
         //Debug.Log("started a clock!" + gameObject.name);
