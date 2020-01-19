@@ -7,6 +7,7 @@ public class DoorController : MonoBehaviour
 {
     public GameObject key;
     public Curiouser_AudioManager audioManager;
+    public List<GameObject> toActivate;
     Animator m_Animator;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,10 @@ public class DoorController : MonoBehaviour
             Debug.Log("Used key!");
             m_Animator.SetTrigger("Open");
             audioManager.DoorOpened();
+            other.gameObject.SetActive(false);
+            foreach (GameObject item in toActivate) {
+                item.SetActive(true);
+            }
         }
     }
 }

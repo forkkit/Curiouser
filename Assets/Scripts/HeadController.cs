@@ -9,16 +9,45 @@ public class HeadController : MonoBehaviour
     AliceController aliceController;
     public BottlePitching bottleSource;
     public CakeAudio cakeSource;
+    public GameObject doNotPassOverlay; // The canvas holding the out-of-bounds message
+    public GameObject winScreenOverlay;
+    public float fadeDuration = 0.2f; // Duration in seconds of UI fade
+    public float maxTimeOutOfBounds = 3f;
+    private bool outOfBounds = false;
+    private CanvasGroup canvasOutOfBounds;
+    private float countdown = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         aliceController = alice.GetComponent<AliceController>();
+        canvasOutOfBounds = doNotPassOverlay.GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Manage fading/in out of out-of-bounds message
+        if (!outOfBounds)
+        {
+            countdown = Mathf.Clamp(countdown - Time.deltaTime, 0, maxTimeOutOfBounds);
+            if (canvasOutOfBounds.alpha > 0)
+                canvasOutOfBounds.alpha -= Time.deltaTime / fadeDuration; 
+        }
+        else
+        {
+            countdown += Time.deltaTime;
+            if (countdown > maxTimeOutOfBounds) {
+                resetScene();
+            }
+            if (canvasOutOfBounds.alpha < 1)
+                canvasOutOfBounds.alpha += Time.deltaTime / fadeDuration;
+        }
+    }
+
+    void resetScene()
+    {
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     void OnTriggerStay(Collider other) 
@@ -38,6 +67,10 @@ public class HeadController : MonoBehaviour
             }
             
         }
+        if (other.gameObject.CompareTag("Playable Area"))
+        {
+            outOfBounds = false;
+        }
     }
 
     void OnTriggerEnter(Collider other){
@@ -51,7 +84,11 @@ public class HeadController : MonoBehaviour
             {
                 bottleSource.StartBottleLoop();
             }
-            
+        }
+        if (other.gameObject.CompareTag("Win"))
+        {
+            WinScreenController winScreenController = winScreenOverlay.GetComponent<WinScreenController>();
+            winScreenController.fadeIn();
         }
     }
 
@@ -59,5 +96,8 @@ public class HeadController : MonoBehaviour
     {
         bottleSource.StopAndResetBottleSound();
         cakeSource.StopRequestingBiteSound();
+        if (other.gameObject.CompareTag("Playable Area")) {
+            outOfBounds = true;
+        }
     }
 }

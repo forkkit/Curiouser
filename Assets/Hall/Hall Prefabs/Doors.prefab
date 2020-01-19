@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9221904907911256011}
   m_Layer: 0
   m_Name: Coll (1)
-  m_TagString: Untagged
+  m_TagString: Do Not Pass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 8244301211584405417}
   m_Layer: 0
   m_Name: Coll
-  m_TagString: Untagged
+  m_TagString: Do Not Pass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,6 +187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Doors
       objectReference: {fileID: 0}
+    - target: {fileID: 2325272848717779474, guid: 965cbb045eba93f429af1640107172c7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4117837314486640195, guid: 965cbb045eba93f429af1640107172c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -241,11 +246,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2325272848717779474, guid: 965cbb045eba93f429af1640107172c7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965cbb045eba93f429af1640107172c7, type: 3}
@@ -858,7 +858,7 @@ PrefabInstance:
     - target: {fileID: 1473472214329046773, guid: 41cf2385559a14848b497ac259161cb0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1473472214329046773, guid: 41cf2385559a14848b497ac259161cb0,
         type: 3}

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Food
   - Drink
+  - Do Not Pass
+  - Win
+  - Playable Area
   layers:
   - Default
   - TransparentFX
