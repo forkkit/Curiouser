@@ -1771,6 +1771,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 366593298472651931, guid: e3add1e5b7d2b764c98f28fbb080a3df,
+        type: 3}
+      propertyPath: m_Name
+      value: Animated Key
+      objectReference: {fileID: 0}
     - target: {fileID: 1535455614924580231, guid: e3add1e5b7d2b764c98f28fbb080a3df,
         type: 3}
       propertyPath: m_Name
