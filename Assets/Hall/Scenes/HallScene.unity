@@ -840,6 +840,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e394ffcce23a2428ca3ad9e3a3052f, type: 3}
+--- !u!1 &682454582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 682454583}
+  - component: {fileID: 682454584}
+  m_Layer: 0
+  m_Name: Cave zone
+  m_TagString: Playable Area
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &682454583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682454582}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.075, y: 4.791, z: 16.856678}
+  m_LocalScale: {x: 1.4963, y: 0.476093, z: 0.8084432}
+  m_Children: []
+  m_Father: {fileID: 1529580535}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &682454584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682454582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &732850475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 3f11a0f59fc1355438f4961cb6035909,
@@ -976,7 +1020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &823886003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1453,6 +1497,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: {fileID: 1976986645}
+  toActivate:
+  - {fileID: 682454582}
+  - {fileID: 823886002}
 --- !u!95 &1100355173
 Animator:
   serializedVersion: 3
@@ -1930,6 +1977,7 @@ Transform:
   m_Children:
   - {fileID: 1989150921}
   - {fileID: 1960839203}
+  - {fileID: 682454583}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2211,6 +2259,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096124360308234200, guid: 4a3a6eeeec6e8d940ae11de0a5124221,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096124360308234203, guid: 4a3a6eeeec6e8d940ae11de0a5124221,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9096124360308234206, guid: 4a3a6eeeec6e8d940ae11de0a5124221,
         type: 3}
@@ -2544,7 +2602,7 @@ GameObject:
   - component: {fileID: 1960839205}
   - component: {fileID: 1960839204}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Side hall
   m_TagString: Playable Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2572,7 +2630,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960839202}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2716,7 +2774,7 @@ GameObject:
   - component: {fileID: 1989150923}
   - component: {fileID: 1989150922}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Main hall
   m_TagString: Playable Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2744,7 +2802,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989150920}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

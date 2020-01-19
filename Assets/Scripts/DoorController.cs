@@ -6,6 +6,7 @@ using UnityEditor;
 public class DoorController : MonoBehaviour
 {
     public GameObject key;
+    public List<GameObject> toActivate;
     Animator m_Animator;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,9 @@ public class DoorController : MonoBehaviour
         {
             Debug.Log("Used key!");
             m_Animator.SetTrigger("Open");
+            foreach (GameObject item in toActivate) {
+                item.SetActive(true);
+            }
         }
     }
 }
