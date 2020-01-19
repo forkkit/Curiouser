@@ -55,9 +55,9 @@ public class HeadController : MonoBehaviour
             }
             
         }
-        if (other.gameObject.CompareTag("Do Not Pass"))
+        if (other.gameObject.CompareTag("Playable Area"))
         {
-            outOfBounds = true;
+            outOfBounds = false;
         }
     }
 
@@ -84,8 +84,8 @@ public class HeadController : MonoBehaviour
     {
         bottleSource.StopAndResetBottleSound();
         cakeSource.StopRequestingBiteSound();
-        if (other.gameObject.CompareTag("Do Not Pass")) {
-            outOfBounds = false;
+        if (other.gameObject.CompareTag("Playable Area")) {
+            outOfBounds = true;
         }
     }
 }
