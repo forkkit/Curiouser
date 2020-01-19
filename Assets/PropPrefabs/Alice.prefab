@@ -301,6 +301,10 @@ MonoBehaviour:
   alice: {fileID: 5678472255551846349}
   bottleSource: {fileID: 5678472255960103879}
   cakeSource: {fileID: 5678472256240168282}
+  doNotPassOverlay: {fileID: 0}
+  winScreenOverlay: {fileID: 0}
+  fadeDuration: 0.2
+  maxTimeOutOfBounds: 3
 --- !u!1 &5678472255551846349
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +365,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243224466305526424, guid: 609a974aacbc08440860908aebe041c2,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: a70a3f2f8c4be8545a5f1a745989b93d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 12974fd41e1520a47be4e5f839f20dac, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

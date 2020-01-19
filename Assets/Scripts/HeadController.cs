@@ -16,12 +16,14 @@ public class HeadController : MonoBehaviour
     private bool outOfBounds = false;
     private CanvasGroup canvasOutOfBounds;
     private float countdown = 0;
+    AudioSource aSource;
 
     // Start is called before the first frame update
     void Start()
     {
         aliceController = alice.GetComponent<AliceController>();
         canvasOutOfBounds = doNotPassOverlay.GetComponent<CanvasGroup>();
+        aSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -89,6 +91,7 @@ public class HeadController : MonoBehaviour
         {
             WinScreenController winScreenController = winScreenOverlay.GetComponent<WinScreenController>();
             winScreenController.fadeIn();
+            aSource.Play();
         }
     }
 
