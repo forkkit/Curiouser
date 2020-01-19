@@ -26,6 +26,7 @@ public class DoorController : MonoBehaviour
         {
             Debug.Log("Used key!");
             m_Animator.SetTrigger("Open");
+            other.gameObject.SetActive(false);
             foreach (GameObject item in toActivate) {
                 item.SetActive(true);
             }
